@@ -1,0 +1,7 @@
+<h1>Welcome, {{ request.user.username }}!</h1>
+
+<form method="post" action="{% url 'join_school' %}">
+  {% csrf_token %}
+  <input type="text" name="code" placeholder="School Code">
+  <input type="submit" value="Join">
+</form>
